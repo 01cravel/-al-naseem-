@@ -976,6 +976,31 @@ section { padding: 120px 48px; }
   line-height: 1.6;
   text-align: center;
 }
+.req {
+  color: #c5392b;
+  font-weight: 500;
+  margin-left: 2px;
+}
+.form-error {
+  display: none;
+  color: #c5392b;
+  font-size: 12px;
+  margin-top: 6px;
+  font-weight: 500;
+}
+.form-row input:user-invalid,
+.form-row input.invalid {
+  border-color: #c5392b;
+  background: #fdf6f5;
+}
+.form-row input:user-invalid + .form-error,
+.form-row input.invalid + .form-error {
+  display: block;
+}
+.form-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
 
 /* ========== STICKY CTA BAR ========== */
 .sticky-cta {
@@ -1440,18 +1465,21 @@ footer {
         <li>How to buy remotely without flying out</li>
       </ul>
     </div>
-    <form class="enquire-form" onsubmit="handleSubmit(event)">
+    <form class="enquire-form" id="leadForm" action="https://formspree.io/f/xbdbzekq" method="POST">
       <div class="form-row">
-        <label>Your name</label>
-        <input type="text" name="name" required placeholder="e.g. Sarah Mitchell">
+        <label>Your name <span class="req">*</span></label>
+        <input type="text" name="name" id="f-name" required minlength="2" placeholder="e.g. Sarah Mitchell">
+        <span class="form-error" data-for="f-name">Please enter your name</span>
       </div>
       <div class="form-row">
-        <label>Email</label>
-        <input type="email" name="email" required placeholder="you@example.com">
+        <label>Email <span class="req">*</span></label>
+        <input type="email" name="email" id="f-email" required placeholder="you@example.com">
+        <span class="form-error" data-for="f-email">Please enter a valid email address</span>
       </div>
       <div class="form-row">
-        <label>Phone (with country code)</label>
-        <input type="tel" name="phone" placeholder="+44 7700 900000">
+        <label>Mobile number (with country code) <span class="req">*</span></label>
+        <input type="tel" name="phone" id="f-phone" required pattern="^\+?[0-9\s\-\(\)]{8,20}$" placeholder="+44 7700 900000">
+        <span class="form-error" data-for="f-phone">Please enter a valid mobile number, including country code (e.g. +44 7700 900000)</span>
       </div>
       <div class="form-row">
         <label>Where do you live?</label>
@@ -1470,8 +1498,11 @@ footer {
         <label>Anything else? (optional)</label>
         <textarea name="message" rows="3" placeholder="e.g. I'd prefer email contact only"></textarea>
       </div>
-      <button type="submit" class="form-submit">Send my details to John</button>
-      <p class="form-note">We'll only use your details to send you the information pack. Your information is never shared with third parties.</p>
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+      <input type="hidden" name="_subject" value="New Al Naseem lead from website">
+      <input type="hidden" name="source" value="al-naseem-landing">
+      <button type="submit" class="form-submit" id="submitBtn">Send my details to John</button>
+      <p class="form-note">Fields marked <span class="req">*</span> are required. We'll only use your details to send you the information pack. Your information is never shared with third parties.</p>
     </form>
   </div>
   <div id="thanks-message" style="display:none; text-align:center;">
@@ -1482,13 +1513,42 @@ footer {
 </section>
 
 <script>
-function handleSubmit(e) {
+const leadForm = document.getElementById('leadForm');
+const submitBtn = document.getElementById('submitBtn');
+
+leadForm.addEventListener('submit', async function(e) {
   e.preventDefault();
-  document.querySelector('.enquire-wrap').style.display = 'none';
-  document.getElementById('thanks-message').style.display = 'block';
-  document.getElementById('thanks-message').scrollIntoView({behavior: 'smooth', block: 'center'});
-  document.getElementById('stickyCta').classList.remove('visible');
-}
+
+  if (!leadForm.checkValidity()) {
+    leadForm.reportValidity();
+    return;
+  }
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending...';
+
+  try {
+    const formData = new FormData(leadForm);
+    const response = await fetch(leadForm.action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      document.querySelector('.enquire-wrap').style.display = 'none';
+      document.getElementById('thanks-message').style.display = 'block';
+      document.getElementById('thanks-message').scrollIntoView({behavior: 'smooth', block: 'center'});
+      document.getElementById('stickyCta').classList.remove('visible');
+    } else {
+      throw new Error('Submission failed');
+    }
+  } catch (err) {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Send my details to John';
+    alert('Sorry, something went wrong. Please try again, or email john@maypartners.ae directly.');
+  }
+});
 
 const stickyCta = document.getElementById('stickyCta');
 const enquireSection = document.getElementById('enquire');
