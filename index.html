@@ -1,0 +1,1626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Al Naseem — Hudayriyat Island, Abu Dhabi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --green: #2d3a22;
+  --green-deep: #1a2415;
+  --green-mid: #4a5c38;
+  --gold: #b8924a;
+  --gold-light: #d4b582;
+  --cream: #f4f1ea;
+  --cream-dark: #e8e3d6;
+  --paper: #faf8f2;
+  --text: #1f1f1d;
+  --text-muted: #6b6b65;
+  --line: rgba(45, 58, 34, 0.12);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: var(--text);
+  background: var(--paper);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.serif { font-family: 'Cormorant Garamond', serif; font-weight: 400; letter-spacing: -0.01em; }
+.eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--gold);
+  vertical-align: middle;
+  margin-right: 12px;
+}
+
+/* ========== NAV ========== */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(250, 248, 242, 0.85);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+  padding: 18px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.brand-mark {
+  width: 36px;
+  height: 36px;
+  background: var(--green);
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+.brand-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--green);
+}
+.brand-text small {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+nav ul {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+}
+nav ul a {
+  font-size: 13px;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.3s;
+}
+nav ul a:hover { color: var(--gold); }
+.nav-cta {
+  background: var(--green);
+  color: var(--paper);
+  padding: 10px 22px;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+.nav-cta:hover { background: var(--green-deep); }
+
+/* ========== HERO ========== */
+.hero {
+  position: relative;
+  min-height: 92vh;
+  background: var(--green);
+  color: var(--paper);
+  overflow: hidden;
+  padding: 80px 48px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(184, 146, 74, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 20% 80%, rgba(184, 146, 74, 0.04) 0%, transparent 50%);
+  pointer-events: none;
+}
+.hero-content { position: relative; z-index: 2; max-width: 640px; }
+.hero .eyebrow { color: var(--gold-light); }
+.hero .eyebrow::before { background: var(--gold-light); }
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(56px, 7vw, 96px);
+  font-weight: 300;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  margin: 32px 0 28px;
+  color: var(--paper);
+}
+.hero h1 em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--gold-light);
+}
+.hero-sub {
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgba(244, 241, 234, 0.78);
+  max-width: 520px;
+  margin-bottom: 48px;
+  font-weight: 300;
+}
+.hero-cta {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.btn-primary {
+  background: var(--gold);
+  color: var(--green-deep);
+  padding: 18px 36px;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+}
+.btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+.btn-secondary {
+  color: var(--paper);
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding-bottom: 3px;
+  border-bottom: 1px solid var(--gold-light);
+}
+
+.hero-visual {
+  position: relative;
+  z-index: 2;
+  height: 600px;
+}
+.hero-card {
+  position: absolute;
+  background: var(--paper);
+  color: var(--text);
+  padding: 32px;
+  width: 320px;
+}
+.hero-card-1 {
+  top: 0;
+  right: 0;
+  border: 1px solid var(--gold);
+}
+.hero-card-2 {
+  bottom: 0;
+  left: 0;
+  background: var(--green-deep);
+  color: var(--paper);
+  border: 1px solid rgba(184, 146, 74, 0.3);
+}
+.card-big {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 64px;
+  font-weight: 300;
+  line-height: 1;
+  color: var(--green);
+  margin-bottom: 8px;
+}
+.hero-card-2 .card-big { color: var(--gold-light); }
+.card-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+.hero-card-2 .card-label { color: rgba(244, 241, 234, 0.6); }
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+.hero-card-2 .card-meta {
+  border-color: rgba(184, 146, 74, 0.2);
+  color: rgba(244, 241, 234, 0.5);
+}
+
+/* ========== MARQUEE ========== */
+.marquee {
+  background: var(--green-deep);
+  color: var(--gold-light);
+  padding: 18px 0;
+  font-size: 12px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  overflow: hidden;
+  white-space: nowrap;
+  border-top: 1px solid rgba(184, 146, 74, 0.15);
+  border-bottom: 1px solid rgba(184, 146, 74, 0.15);
+  max-width: 100%;
+  text-align: center;
+}
+.marquee span { display: inline-block; padding: 0 32px; }
+.marquee span::before {
+  content: '◆';
+  margin-right: 32px;
+  color: var(--gold);
+}
+
+/* ========== SECTIONS ========== */
+section { padding: 120px 48px; }
+.section-head { max-width: 1280px; margin: 0 auto 80px; }
+.section-head .eyebrow { display: block; margin-bottom: 24px; }
+.section-head h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(40px, 5vw, 68px);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--green);
+  max-width: 900px;
+}
+.section-head h2 em { font-style: italic; color: var(--gold); }
+
+/* ========== STATS ========== */
+.stats {
+  background: var(--cream);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.stat-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--line);
+}
+.stat {
+  background: var(--cream);
+  padding: 56px 32px;
+}
+.stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 64px;
+  font-weight: 300;
+  line-height: 1;
+  color: var(--green);
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+.stat-num sub {
+  font-size: 14px;
+  vertical-align: super;
+  color: var(--gold);
+  margin-left: 4px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+.stat-label {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ========== PROPERTY SHOWCASE ========== */
+.property {
+  background: var(--paper);
+}
+.property-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+.property-visual {
+  background: var(--green);
+  aspect-ratio: 4/5;
+  position: relative;
+  overflow: hidden;
+}
+.property-visual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, transparent 0%, rgba(26, 36, 21, 0.4) 100%),
+    repeating-linear-gradient(45deg, transparent 0, transparent 40px, rgba(184, 146, 74, 0.04) 40px, rgba(184, 146, 74, 0.04) 41px);
+}
+.property-visual::after {
+  content: 'AL NASEEM\A 6BR · SEA VIEW';
+  white-space: pre;
+  position: absolute;
+  bottom: 32px;
+  left: 32px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--gold-light);
+  letter-spacing: -0.01em;
+}
+.property-tag {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  background: var(--gold);
+  color: var(--green-deep);
+  padding: 10px 18px;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  z-index: 2;
+}
+.property-details h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 48px;
+  font-weight: 300;
+  color: var(--green);
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
+}
+.property-details p {
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+.spec-table {
+  border-top: 1px solid var(--line);
+  margin-bottom: 40px;
+}
+.spec-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+}
+.spec-row .spec-label {
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 11px;
+}
+.spec-row .spec-val {
+  font-weight: 500;
+  color: var(--green);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+}
+.price-bar {
+  background: var(--green);
+  color: var(--paper);
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--gold);
+}
+.price-bar .label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--gold-light);
+  margin-bottom: 6px;
+}
+.price-bar .price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+/* ========== ROI ========== */
+.roi {
+  background: var(--green);
+  color: var(--paper);
+  position: relative;
+}
+.roi .section-head h2 { color: var(--paper); }
+.roi .section-head h2 em { color: var(--gold-light); }
+.roi-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.roi-card {
+  border: 1px solid rgba(184, 146, 74, 0.25);
+  padding: 40px 28px;
+  background: rgba(26, 36, 21, 0.4);
+  transition: all 0.3s;
+}
+.roi-card:hover {
+  border-color: var(--gold);
+  background: rgba(184, 146, 74, 0.08);
+}
+.roi-card.featured {
+  background: var(--gold);
+  color: var(--green-deep);
+  border-color: var(--gold);
+}
+.roi-scenario {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--gold-light);
+  margin-bottom: 32px;
+}
+.roi-card.featured .roi-scenario { color: var(--green-deep); }
+.roi-value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 72px;
+  font-weight: 300;
+  line-height: 1;
+  color: var(--gold-light);
+  margin-bottom: 8px;
+}
+.roi-card.featured .roi-value { color: var(--green-deep); }
+.roi-suffix {
+  font-size: 14px;
+  color: rgba(244, 241, 234, 0.5);
+  margin-bottom: 24px;
+  letter-spacing: 0.05em;
+}
+.roi-card.featured .roi-suffix { color: rgba(26, 36, 21, 0.6); }
+.roi-detail {
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(244, 241, 234, 0.7);
+  border-top: 1px solid rgba(184, 146, 74, 0.2);
+  padding-top: 20px;
+}
+.roi-card.featured .roi-detail {
+  color: rgba(26, 36, 21, 0.7);
+  border-color: rgba(26, 36, 21, 0.2);
+}
+.roi-note {
+  max-width: 1280px;
+  margin: 48px auto 0;
+  font-size: 12px;
+  color: rgba(244, 241, 234, 0.5);
+  font-style: italic;
+}
+
+/* ========== VIDEO ========== */
+.video-section {
+  background: var(--paper);
+}
+.video-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 32px;
+}
+.video-primary {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  background: var(--green);
+  overflow: hidden;
+}
+.video-secondary {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  background: var(--green);
+  overflow: hidden;
+}
+.video-grid iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+.video-caption {
+  margin-top: 18px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+.video-caption .vc-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  color: var(--green);
+  font-weight: 400;
+}
+.video-caption .vc-meta {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+}
+
+/* ========== ISLAND ========== */
+.island { background: var(--cream); }
+.island-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--line);
+}
+.feature {
+  background: var(--cream);
+  padding: 48px 36px;
+  transition: background 0.4s;
+}
+.feature:hover { background: var(--paper); }
+.feature-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 56px;
+  font-weight: 300;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 20px;
+}
+.feature-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--green);
+  margin-bottom: 12px;
+}
+.feature-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ========== ADVISOR ========== */
+.advisor {
+  background: var(--paper);
+  padding: 120px 48px;
+}
+.advisor-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: center;
+}
+.advisor-photo {
+  position: relative;
+  background: var(--green);
+  aspect-ratio: 3/4;
+}
+.advisor-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.advisor-badge {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: var(--gold);
+  color: var(--green-deep);
+  padding: 14px 24px;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.advisor-content .eyebrow { display: block; margin-bottom: 24px; }
+.advisor-content h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 72px;
+  font-weight: 300;
+  color: var(--green);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+.advisor-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-style: italic;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+.advisor-meta {
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+.advisor-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 24px;
+  max-width: 540px;
+}
+.advisor-content p:last-of-type { margin-bottom: 48px; }
+.advisor-contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  border-top: 1px solid var(--line);
+  padding-top: 32px;
+  max-width: 540px;
+}
+.contact-item .label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+.contact-item .val {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  color: var(--green);
+  font-weight: 400;
+}
+
+/* ========== SCARCITY BAR ========== */
+.scarcity-bar {
+  background: var(--gold);
+  color: var(--green-deep);
+  padding: 18px 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid rgba(26, 36, 21, 0.15);
+}
+.scarcity-bar .pulse {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--green-deep);
+  border-radius: 50%;
+  margin-right: 8px;
+  animation: pulse 1.6s infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.4); }
+}
+.scarcity-bar strong {
+  font-weight: 600;
+}
+.scarcity-bar .divider {
+  width: 1px;
+  height: 14px;
+  background: rgba(26, 36, 21, 0.3);
+}
+
+/* ========== WHY NOW ========== */
+.why-now {
+  background: var(--green-deep);
+  color: var(--paper);
+  padding: 140px 48px;
+}
+.why-now .section-head { margin-bottom: 60px; }
+.why-now .section-head h2 { color: var(--paper); }
+.why-now .section-head h2 em { color: var(--gold-light); }
+.why-now .section-head .eyebrow { color: var(--gold-light); }
+.why-now .section-head .eyebrow::before { background: var(--gold-light); }
+.why-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: rgba(184, 146, 74, 0.2);
+}
+.why-card {
+  background: var(--green-deep);
+  padding: 56px 48px;
+  position: relative;
+}
+.why-card .num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 80px;
+  font-weight: 300;
+  line-height: 1;
+  color: var(--gold);
+  margin-bottom: 32px;
+  letter-spacing: -0.02em;
+}
+.why-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--paper);
+  margin-bottom: 18px;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+.why-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(244, 241, 234, 0.72);
+  margin-bottom: 24px;
+}
+.why-proof {
+  display: inline-block;
+  border-top: 1px solid rgba(184, 146, 74, 0.25);
+  padding-top: 18px;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  font-weight: 500;
+}
+
+/* ========== PROOF / TESTIMONIAL ========== */
+.proof {
+  background: var(--cream);
+  padding: 120px 48px;
+  border-top: 1px solid var(--line);
+}
+.proof-wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.proof-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 300;
+  line-height: 1.35;
+  color: var(--green);
+  letter-spacing: -0.01em;
+}
+.proof-quote::before {
+  content: '“';
+  font-size: 80px;
+  line-height: 0;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 32px;
+}
+.proof-attr {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.proof-attr-line {
+  width: 32px;
+  height: 1px;
+  background: var(--gold);
+}
+.proof-attr-text {
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.proof-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+.proof-stat {
+  border-left: 2px solid var(--gold);
+  padding-left: 24px;
+}
+.proof-stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 56px;
+  font-weight: 300;
+  color: var(--green);
+  line-height: 1;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+.proof-stat-label {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ========== CTA ========== */
+.cta-block {
+  background: var(--green-deep);
+  color: var(--paper);
+  padding: 140px 48px;
+}
+.enquire-wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+.enquire-left .eyebrow { color: var(--gold-light); display: block; margin-bottom: 24px; }
+.enquire-left .eyebrow::before { background: var(--gold-light); }
+.enquire-left h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(40px, 5vw, 68px);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 28px;
+}
+.enquire-left h2 em { font-style: italic; color: var(--gold-light); }
+.enquire-left p {
+  font-size: 16px;
+  color: rgba(244, 241, 234, 0.7);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+.enquire-list {
+  list-style: none;
+  padding: 0;
+}
+.enquire-list li {
+  padding: 12px 0;
+  padding-left: 28px;
+  position: relative;
+  border-bottom: 1px solid rgba(184, 146, 74, 0.15);
+  color: rgba(244, 241, 234, 0.85);
+  font-size: 15px;
+}
+.enquire-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-weight: 500;
+}
+.enquire-form {
+  background: var(--paper);
+  color: var(--text);
+  padding: 48px 40px;
+}
+.form-row { margin-bottom: 20px; }
+.form-row label {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+.form-row input,
+.form-row select,
+.form-row textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.2s;
+  border-radius: 0;
+}
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+  border-color: var(--gold);
+}
+.form-row textarea {
+  resize: vertical;
+  font-family: 'Inter', sans-serif;
+}
+.form-submit {
+  width: 100%;
+  background: var(--green);
+  color: var(--paper);
+  border: none;
+  padding: 18px;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: background 0.3s;
+  font-family: 'Inter', sans-serif;
+}
+.form-submit:hover { background: var(--green-deep); }
+.form-note {
+  font-size: 11px !important;
+  color: var(--text-muted) !important;
+  margin-top: 16px !important;
+  line-height: 1.6;
+  text-align: center;
+}
+.req {
+  color: #c5392b;
+  font-weight: 500;
+  margin-left: 2px;
+}
+.form-error {
+  display: none;
+  color: #c5392b;
+  font-size: 12px;
+  margin-top: 6px;
+  font-weight: 500;
+}
+.form-row input:user-invalid,
+.form-row input.invalid {
+  border-color: #c5392b;
+  background: #fdf6f5;
+}
+.form-row input:user-invalid + .form-error,
+.form-row input.invalid + .form-error {
+  display: block;
+}
+.form-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ========== STICKY CTA BAR ========== */
+.sticky-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--green-deep);
+  color: var(--paper);
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 200;
+  border-top: 1px solid var(--gold);
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+}
+.sticky-cta.visible { transform: translateY(0); }
+.sticky-cta-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.sticky-cta-text strong {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--gold-light);
+  letter-spacing: 0;
+}
+.sticky-cta-text span {
+  font-size: 12px;
+  color: rgba(244, 241, 234, 0.6);
+}
+.sticky-cta a {
+  background: var(--gold);
+  color: var(--green-deep);
+  padding: 14px 28px;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: background 0.3s;
+  white-space: nowrap;
+}
+.sticky-cta a:hover { background: var(--gold-light); }
+
+/* ========== FOOTER ========== */
+footer {
+  background: var(--green);
+  color: rgba(244, 241, 234, 0.5);
+  padding: 48px;
+  font-size: 12px;
+  border-top: 1px solid rgba(184, 146, 74, 0.15);
+}
+.footer-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+.footer-grid h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--gold-light);
+  margin-bottom: 18px;
+}
+.footer-grid p, .footer-grid a {
+  color: rgba(244, 241, 234, 0.6);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+.footer-bottom {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-top: 32px;
+  border-top: 1px solid rgba(184, 146, 74, 0.15);
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.disclaimer {
+  max-width: 1280px;
+  margin: 32px auto 0;
+  font-size: 11px;
+  color: rgba(244, 241, 234, 0.35);
+  font-style: italic;
+  line-height: 1.7;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 968px) {
+  html, body { overflow-x: hidden; }
+  nav { padding: 16px 20px; }
+  nav ul { display: none; }
+  .scarcity-bar { padding: 12px 16px; gap: 8px; font-size: 10px; flex-wrap: wrap; justify-content: center; text-align: center; }
+  .scarcity-bar .divider { display: none; }
+  .marquee {
+    white-space: normal;
+    padding: 14px 20px;
+    line-height: 2;
+  }
+  .marquee span { padding: 0 8px; font-size: 10px; }
+  .marquee span::before { margin-right: 8px; }
+  .hero, .property-grid, .advisor-grid, .enquire-wrap, .proof-wrap { grid-template-columns: 1fr; gap: 40px; padding: 60px 20px; }
+  .enquire-wrap, .proof-wrap { padding: 0; }
+  .stat-grid, .roi-grid, .island-grid, .why-grid { grid-template-columns: 1fr; }
+  .proof-stats { grid-template-columns: 1fr 1fr; }
+  section { padding: 70px 20px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  footer { padding: 40px 20px; }
+  .hero-visual { height: auto; display: flex; flex-direction: column; gap: 16px; }
+  .hero-card { position: static; width: 100%; padding: 24px; }
+  .card-big { font-size: 44px; }
+  .hero h1 { font-size: clamp(40px, 9vw, 56px) !important; }
+  .sticky-cta { padding: 10px 16px; }
+  .sticky-cta-text strong { font-size: 12px; }
+  .sticky-cta-text span { display: none; }
+  .sticky-cta a { padding: 10px 14px; font-size: 10px; }
+  .why-card { padding: 36px 24px; }
+  .why-card .num { font-size: 48px; margin-bottom: 20px; }
+  .why-card h3 { font-size: 22px; }
+  .video-grid { grid-template-columns: 1fr; }
+  .property-details h3 { font-size: 32px; }
+  .advisor-content h3 { font-size: 48px; }
+  .footer-bottom { flex-direction: column; gap: 12px; align-items: flex-start; }
+  .price-bar { flex-direction: column; gap: 16px; align-items: flex-start; }
+  .price-bar > div:last-child { text-align: left !important; }
+  .enquire-form { padding: 32px 24px; }
+  iframe, img, video { max-width: 100%; }
+}
+</style>
+</head>
+<body>
+
+<div class="sticky-cta" id="stickyCta">
+  <div class="sticky-cta-text">
+    <strong>9 villas remaining · Prices rise 5% on 1 March</strong>
+    <span>Get the full details pack — John responds within 24 hours</span>
+  </div>
+  <a href="#enquire">Reserve now →</a>
+</div>
+
+<nav>
+  <div class="brand">
+    <div class="brand-mark">M</div>
+    <div class="brand-text">May Property<small>UAE · Private Advisory</small></div>
+  </div>
+  <ul>
+    <li><a href="#asset">The Asset</a></li>
+    <li><a href="#returns">Returns</a></li>
+    <li><a href="#island">Hudayriyat</a></li>
+    <li><a href="#advisor">Your Advisor</a></li>
+  </ul>
+  <a href="#enquire" class="nav-cta">Register Interest</a>
+</nav>
+
+<div class="scarcity-bar">
+  <span><span class="pulse"></span>Phase 1 release: <strong>9 villas remaining</strong></span>
+  <span class="divider"></span>
+  <span>Prices rise <strong>5% from 1 March 2026</strong></span>
+  <span class="divider"></span>
+  <span><strong>Q1 2026:</strong> Hudayriyat = #1 market in Abu Dhabi</span>
+</div>
+
+<section class="hero">
+  <div class="hero-content">
+    <span class="eyebrow">Now selling · January 2026</span>
+    <h1>The most talked-about<br><em>address in</em><br>Abu Dhabi.</h1>
+    <p class="hero-sub">A 6-bedroom beachfront villa on Hudayriyat Island — the development the Abu Dhabi government is pouring billions into. Pay 10% today. Pay no tax on profit when you sell. Get 10-year UAE residency the day you sign.</p>
+    <div class="hero-cta">
+      <a href="#enquire" class="btn-primary">Reserve your place</a>
+      <a href="#asset" class="btn-secondary">See the villa →</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-card hero-card-1">
+      <div class="card-label">Price per square foot</div>
+      <div class="card-big">1,279<sub>AED</sub></div>
+      <div class="card-meta"><span>~30% cheaper than Dubai</span><span>9 left</span></div>
+    </div>
+    <div class="hero-card hero-card-2">
+      <div class="card-label">Likely return at handover</div>
+      <div class="card-big">+133%</div>
+      <div class="card-meta"><span>On money invested</span><span>By 2028</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee">
+  <span>Pay 10% now</span><span>0% tax on profit</span><span>10-year UAE residency</span><span>Sea-view location</span><span>Built by Modon</span><span>Yours forever</span>
+</div>
+
+<section class="stats">
+  <div class="stat-grid">
+    <div class="stat">
+      <div class="stat-num">11.97<sub>BN</sub></div>
+      <div class="stat-label">AED of homes sold on Hudayriyat in just 3 months — the most active market in Abu Dhabi.</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">+16<sub>%</sub></div>
+      <div class="stat-label">How much top Abu Dhabi homes went up in value last year.</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">0<sub>TAX</sub></div>
+      <div class="stat-label">No tax on profit when you sell. No property tax. No inheritance tax.</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">10<sub>YR</sub></div>
+      <div class="stat-label">A 10-year UAE residency visa for you and your family, included with the purchase.</div>
+    </div>
+  </div>
+</section>
+
+<section class="why-now">
+  <div class="section-head">
+    <span class="eyebrow">Why now</span>
+    <h2>Six reasons this isn't <em>going to wait for you.</em></h2>
+  </div>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="num">01</div>
+      <h3>The government won't let it fail.</h3>
+      <p>Hudayriyat isn't a private developer's gamble. The whole island is owned and developed by Modon — a company wholly owned by ADQ, Abu Dhabi's sovereign holding company. ADQ controls more than $250 billion in assets. The same entity that built Yas Island, Saadiyat, and Etihad is behind this. They are not in the business of letting their flagship project decline.</p>
+      <div class="why-proof">Modon · 100% owned by ADQ Sovereign Fund</div>
+    </div>
+    <div class="why-card">
+      <div class="num">02</div>
+      <h3>Every dirham of profit is yours.</h3>
+      <p>Buy this villa in London and you'd hand the taxman up to 28% on the way out. Buy it here and you keep all of it. No capital gains tax. No property tax. No income tax on rental yield. No inheritance tax. The UAE has zero plans to introduce any of these for residential property — and a constitutional commitment to the model that built Dubai.</p>
+      <div class="why-proof">0% · The most tax-efficient property market on earth</div>
+    </div>
+    <div class="why-card">
+      <div class="num">03</div>
+      <h3>The market just hit a record.</h3>
+      <p>In Q1 2026 alone, Hudayriyat recorded AED 11.97 billion in property transactions. That's more than Saadiyat (AED 8.8B) and Al Reem (AED 9.45B) combined. An island most international buyers hadn't heard of two years ago is now the single most active real estate market in the entire emirate. Money knows where it's going.</p>
+      <div class="why-proof">AED 11.97B · Single-quarter transaction volume</div>
+    </div>
+    <div class="why-card">
+      <div class="num">04</div>
+      <h3>You're getting Dubai prices in 2018.</h3>
+      <p>The villa we're showing you costs AED 1,279 per square foot. Dubai Hills Estate — comparable luxury, older development — sells for AED 3,400. Saadiyat trades at AED 2,950. You're buying frontline coastal Abu Dhabi at a 30–60% discount to comparable stock that's already sold out elsewhere. That gap closes. It always closes.</p>
+      <div class="why-proof">31% below Abu Dhabi prime · 62% below Dubai Hills</div>
+    </div>
+    <div class="why-card">
+      <div class="num">05</div>
+      <h3>The hype is just getting started.</h3>
+      <p>Bulgari opening a hotel next door. Surf Abu Dhabi — the world's largest wave pool — already open. MGM's anticipated casino licence approval in Abu Dhabi will be a region-defining event. ADGM (the financial district) is doubling in size. A high-speed rail to Dubai breaks ground next year. None of this is priced in yet.</p>
+      <div class="why-proof">Bulgari · MGM · ADGM · High-speed rail</div>
+    </div>
+    <div class="why-card">
+      <div class="num">06</div>
+      <h3>10-year residency, included.</h3>
+      <p>The villa comes with an automatic UAE Golden Visa — 10 years of residency for you, your spouse, and your children. No income requirements, no renewals, no minimum stay. Open UAE bank accounts. Move your business here. Send your children to school here. Or just have the option for when you want it. Comparable visas elsewhere cost £2M+ to obtain on their own.</p>
+      <div class="why-proof">10-Year Golden Visa · You + family</div>
+    </div>
+  </div>
+  <div style="max-width: 1280px; margin: 56px auto 0; text-align: center;">
+    <a href="#enquire" class="btn-primary">Reserve before prices rise</a>
+  </div>
+</section>
+
+<section class="proof">
+  <div class="proof-wrap">
+    <div>
+      <p class="proof-quote">Hudayriyat is where Abu Dhabi's next major wealth creation story is unfolding. Money has chosen its destination.</p>
+      <div class="proof-attr">
+        <div class="proof-attr-line"></div>
+        <div class="proof-attr-text">Sherwoods Property Research, March 2026</div>
+      </div>
+    </div>
+    <div class="proof-stats">
+      <div class="proof-stat">
+        <div class="proof-stat-num">#1</div>
+        <div class="proof-stat-label">Ranked market in the Abu Dhabi emirate, Q1 2026</div>
+      </div>
+      <div class="proof-stat">
+        <div class="proof-stat-num">+16%</div>
+        <div class="proof-stat-label">Capital growth year-on-year in Abu Dhabi prime</div>
+      </div>
+      <div class="proof-stat">
+        <div class="proof-stat-num">40+</div>
+        <div class="proof-stat-label">Nationalities of confirmed buyers on the island</div>
+      </div>
+      <div class="proof-stat">
+        <div class="proof-stat-num">3,000ha</div>
+        <div class="proof-stat-label">Total island masterplan — larger than Monaco</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="property" id="asset">
+  <div class="section-head">
+    <span class="eyebrow">The Villa</span>
+    <h2>You're buying frontline coast <em>at off-plan prices.</em></h2>
+  </div>
+  <div class="property-grid">
+    <div class="property-visual">
+      <div class="property-tag">Only a few left</div>
+    </div>
+    <div class="property-details">
+      <h3>Al Naseem, Hudayriyat Island</h3>
+      <p>A spacious sea-view home in Modon's flagship community. Modern Californian style, private pool, large garden. Quiet enough to feel like a retreat — 15 minutes from downtown Abu Dhabi. The exact tier of villa that's already sold out twice over on Saadiyat. Get in here before the same thing happens.</p>
+      <div class="spec-table">
+        <div class="spec-row"><span class="spec-label">Bedrooms</span><span class="spec-val">6 · Sea view</span></div>
+        <div class="spec-row"><span class="spec-label">Size of home</span><span class="spec-val">8,416 sq. ft</span></div>
+        <div class="spec-row"><span class="spec-label">Size of plot</span><span class="spec-val">10,075 sq. ft</span></div>
+        <div class="spec-row"><span class="spec-label">Style</span><span class="spec-val">Modern Californian</span></div>
+        <div class="spec-row"><span class="spec-label">Ready to move in</span><span class="spec-val">Q3 2028</span></div>
+        <div class="spec-row"><span class="spec-label">How you pay</span><span class="spec-val">10% now, 60% at handover</span></div>
+      </div>
+      <div class="price-bar">
+        <div>
+          <div class="label">Total price</div>
+          <div class="price">AED 10.77M</div>
+        </div>
+        <div style="text-align: right;">
+          <div class="label">Pay only this until 2028</div>
+          <div class="price">AED 4.53M</div>
+        </div>
+      </div>
+      <a href="#enquire" class="btn-primary" style="display:inline-block; margin-top: 32px;">Get the full details pack</a>
+    </div>
+  </div>
+</section>
+
+<section class="video-section">
+  <div class="section-head">
+    <span class="eyebrow">Watch</span>
+    <h2>See the villa. <em>See the island.</em></h2>
+  </div>
+  <div class="video-grid">
+    <div>
+      <div class="video-primary">
+        <iframe src="https://www.youtube.com/embed/_bm80YSLXRo?rel=0&modestbranding=1" title="Al Naseem Villas by Modon" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="video-caption">
+        <span class="vc-title">Al Naseem Villas by Modon</span>
+        <span class="vc-meta">The Asset · 2:14</span>
+      </div>
+    </div>
+    <div>
+      <div class="video-secondary">
+        <iframe src="https://www.youtube.com/embed/L4gNJtnFJZU?rel=0&modestbranding=1" title="Inside Hudayriyat Island" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="video-caption">
+        <span class="vc-title">Inside Hudayriyat Island</span>
+        <span class="vc-meta">The Island · 8:36</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="roi" id="returns">
+  <div class="section-head">
+    <span class="eyebrow">What you could make</span>
+    <h2>Put in AED 4.5M. <em>Walk away with up to AED 14M.</em></h2>
+  </div>
+  <div class="roi-grid">
+    <div class="roi-card">
+      <div class="roi-scenario">If prices stay flat</div>
+      <div class="roi-value">+87<sub style="font-size:24px;color:var(--gold-light);font-family:Inter;font-weight:400;">%</sub></div>
+      <div class="roi-suffix">Profit on what you paid in</div>
+      <div class="roi-detail">Sell for AED 14.7M.<br>You pocket about AED 4M.</div>
+    </div>
+    <div class="roi-card featured">
+      <div class="roi-scenario">Most likely outcome</div>
+      <div class="roi-value">+133<sub style="font-size:24px;color:var(--green-deep);font-family:Inter;font-weight:400;">%</sub></div>
+      <div class="roi-suffix">Profit on what you paid in</div>
+      <div class="roi-detail">Sell for AED 16.8M.<br>You pocket about AED 6M.</div>
+    </div>
+    <div class="roi-card">
+      <div class="roi-scenario">If the market keeps rising</div>
+      <div class="roi-value">+226<sub style="font-size:24px;color:var(--gold-light);font-family:Inter;font-weight:400;">%</sub></div>
+      <div class="roi-suffix">Profit on what you paid in</div>
+      <div class="roi-detail">Sell for AED 21.0M.<br>You pocket about AED 10M.</div>
+    </div>
+    <div class="roi-card">
+      <div class="roi-scenario">Best case</div>
+      <div class="roi-value">+319<sub style="font-size:24px;color:var(--gold-light);font-family:Inter;font-weight:400;">%</sub></div>
+      <div class="roi-suffix">Profit on what you paid in</div>
+      <div class="roi-detail">Sell for AED 25.2M.<br>You pocket about AED 14M.</div>
+    </div>
+  </div>
+  <p class="roi-note">These figures show how your money could grow if you sell at handover in 2028. They're based on what similar homes are selling for now in nearby areas like Saadiyat and Dubai. Property values can go down as well as up.</p>
+  <div style="max-width: 1280px; margin: 56px auto 0; text-align: center;">
+    <a href="#enquire" class="btn-primary">Talk to John about the numbers</a>
+  </div>
+</section>
+
+<section class="island" id="island">
+  <div class="section-head">
+    <span class="eyebrow">The Neighbourhood</span>
+    <h2>This is where Abu Dhabi <em>is putting its money.</em></h2>
+  </div>
+  <div class="island-grid">
+    <div class="feature">
+      <div class="feature-num">600m</div>
+      <div class="feature-title">Your own beach</div>
+      <div class="feature-desc">Plus a waterfront strip of cafés, restaurants and bars, just minutes from your door.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-num">220km</div>
+      <div class="feature-title">Cycling tracks</div>
+      <div class="feature-desc">Plus running trails, mountain bike routes, and a professional cycling stadium.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-num">Surf</div>
+      <div class="feature-title">World's biggest wave pool</div>
+      <div class="feature-desc">Plus skate parks, BMX tracks, climbing, and a high-ropes course for the kids.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-num">15min</div>
+      <div class="feature-title">To downtown Abu Dhabi</div>
+      <div class="feature-desc">Quick drive to the city centre, the financial district, and the international school belt.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-num">40+</div>
+      <div class="feature-title">Marina berths</div>
+      <div class="feature-desc">Kayaking, paddleboarding, jet-skis, and your own boat if you want one.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-num">Bulgari</div>
+      <div class="feature-title">Hotel coming next door</div>
+      <div class="feature-desc">A 5-star Bulgari resort opening nearby — the kind of name that pulls property values up.</div>
+    </div>
+  </div>
+</section>
+
+<section class="advisor" id="advisor">
+  <div class="advisor-grid">
+    <div class="advisor-photo">
+      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAGQAQsDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD6A1DVYbRCzuox71wfiPxjf7HTSYEkk7FyQtRTK87bpmLn3NM+zr6V503Ke7PSjFRPIPF1h4/8SM6z6nBDbt/yyhLKPxPU1wsnwn8QMxJmtmJ9WP8AhX019mX0pfsy+lOF6fwkygpbny83wm8QjobU/wDAz/hUbfCnxGP4bY/8DP8AhX1KLQH+GniwB7Vp7Wfcj2ED5Tb4W+JB/wAsYD/20/8ArUw/DDxL/wA+0R/7aV9YjTl/u0v9noP4RS9tPuHsIHyZ/wAKy8TD/lzQ/wDbQU0/DbxMP+XEf9/BX1uNPU/wil/s1T/CKftpi9hA+Rv+Fd+JAf8AkHn/AL7X/Grtr4F8QR43ac//AH0P8a+rf7MT+6PypP7NT+6KTqzY1Qij5rtPCetx43WEg/EVtWnh/VUxusZf0r3r+z0H8Ip4sF7KKzbkzSMVE8Yt9I1BAM2ko/Cty1s7tEGbaQcelenppynqBViPTkH8NJUZMp1Ejy37NdBs/Z5f++atR+enWCX/AL5NekvZIP4RVeWyUfwih0WuoKomee+fMH/1Ev8A3yasC/lVf9TJ/wB8muxNqufuinrZKe1QqbHzHCyanL/zyk/75NVJdTl/55yf98mvSBYR/wBwUHToz/AKr2L7i50ebDUZSn+rf/vk1Ru76Ug/I/5GvVDp8Y/hH5VFJp8ZH3F/Kl7NofMeM3N2/OVb8qymu3Ex4b8q9xk0yI/8s1/KohpEBOfKX8qpRsK55LaXxwM5q2dQAFepjSYAP9Un5CpYdDtnOWhQj/dFJwY7nkguppjiGORz/sqTVu30jWrzHlWbqD3fivZrXTbeIAJEi/QVoJbJjhRTVNk8x4/Z+BtVmINxPHED2UEmty0+HVvwbqeaU+mcCvSBEAelP8v2qvZoXMcbaeCNJt8FbSNm9WGTWouhWiqALeMAf7NbxXHakquRCuceLlfUU4XC+orzf7Lq46alN+Q/wpywayOmoyH6qP8ACs+aXYvQ9KWdT3FTxyKfSvNYl1pTzfMfqgrRtpNWHW6z/wAAFLnfYLHokRQ1YygHauItZtSBG6cH/gNXxNqBHDqf+A0c77BY6kFadha5YT6gvVl/Kg394o5Zfyo5n2Cx1kYWpAFrko9Tu/8AZP4VYj1O77haan5CaOlKrTGC1zcmqXY/hWq76zcr/Av51XN5CsdO+0U6PbiuMl125/55j86lg124OB5Y/OhSVwa0O1TbUwxiuUg1S7f7tuxrRhvLkjLxgD610w1MJOxrtiq8uMGsi81owA7oycehrDuvGcEZIaN81UoExmdQzLmpoyprzefx9bRz7Whm/StTTfGVvcEYjlA9xXOtXaxu2rXudyAD0p4jJ6Csa0162cD5W/KtOLWLYjjd+VdccO5HPKukTfZWNMe2xTjq0O3+L8qpXGtW65zu/KqeFt0JWIv1FlixVfIBxWbe+JLOIHczD/gNc3d+PNJhm2yTlT/umuWrTcN0dEKil1O3yKtW3I4rhrPxtpM5+W5H/fJrZtfE9gcbZgR9DUxjzbFSkkddEhqzGnqa5uLxJZEf64flSzeKbaMfu1aQ/St40W+hhKr5nTEKDTXdR6VxM/im4c/uolQe/NZd9rN9KpzOyj0Xitlh5djN10d7dXsMSkySKo9zWNJ4m0tHKteQgjr8wrzDV7iWQEySu31auRnb9831qXhn3Gq/kezRaJGx5Y1OdIiQcE1owMuzg09lLDqaXso22H7SXcw5bBB0qt5Sxvg1tzR9Tmsi8A81RurnqQSN6c7lyyhVyM1txQRqo4FZenoBjBrXEbEcVpTpK1yKlR3sQzxIRxWRdwAZIre8hjVSezU53k06lNWFTm7mEsir6VIshJ+VSfoK0YdPhBzgfjV2O2RegFcvKdFzE+zzy9Ex9aBpMj/fbH0roliA6CnbAKrlFcwY9Diz82W+taFvpkMWNqAfhWgMCpY13GhRC5WEIReAKrzbihAFbkVsGHNOazQDpW8KUmYyqRRwGq27urZBrg9agaNycGvZdStowrcCvOfFUKBH2jmumFK2pzzqJnmepyA3CYPPeuk0GRdi81xOo70v23evFdF4aZ3YA9KyXxlN+6eh2Uo4rbtWJxgVlaRBFtUsa6m0jgUDivTpR0OGpIYiO69KpXlq+05FbvnoinAFZWoXbFSAK00ITZwniIeTE5b0ryHWbgS3xwelev8AiWNp43zXj2tW4gvW964cU38jrolzSLgJIBmu0064yBXn1pIFIxXT6VNcyYEMTP8AQVywnys3krnb28uQKuiTA5NYlnZ6tIBst9v1NaMfh7Wbj78ojH+yK7I1HbSLOaSj1ZYNwoPLCq8+owRqd8i4+tXbbwNPKc3FxK344rUi8A2yrlo9x/2uaf757KxPNTXU871jWbUKdr7vpXGT6uDM5VTjNezav4HgMTBYwOPSvPbzwRILmQKDtzxWcoVi41IH0hb6SidzSz2KgHBNayxvg1BPFJg108q7HOmzkNVtXRWKuwrzXX7y8gv1ImcKegr1zUoiVO4V5T46VY763A9TXHiaS5bnVh6j5jf8N3c0iKZJST712cNw20YavO9A3FV2V2FvDKQDk4rSnGy0QTd2bTXBC8tWPqF3ISQrVOYnxy1Zl9+7yTWddXRdJ6k1ncTucbq2rSOV8ZasPS5E6kiuitbqJRywrClRT1ZtUq20RZEDKvUVWuA6g4Ip8uoxjpk1kalqbhT5agfWul4dNaIw9s11GXV7JCeSMVNZ6n03OorzvxTqd15Tnzin+7xWZ4c1XeFEshZvc1zqjyzszV1rx0Pa4dWQD7wP0qc6nuXha4zTJmlUbATW/bQTMBkV3Qpo4pVGJqVy7qe1cPr+Cj5rtL+1k2HmvOvF5nghkKKTxWjSiiFJtnmniFlF2MHnNb3hp1VF5rg9Su3kvHMmQQehrV0TVBEQCa44tc9zp+zY9j06cYGDXQ2s445rzTS9ZQhfnH510drrMKjLyKPxr0YJWOOb1O3EgK9aoXj8GsA+JrRBzMv51nX/AIwslU/vVJ+tEqkI7sIxk9kSa7IFjY5rxrxRcBr7CnPNdP4h8VfaVZYDxXn9xK016CxySa4a9VT0idVOLjqzpvCWltqV2q4JUda938M+G4YYkxGPyrzr4S2qvK5IBINe/aRbAIvFbYalFR5mYV6rcuUZZaTGoGEH5VpR6ag6KK0oIQAOKtLFWsqltjNQuZiWKjsKla0XHStIR4pWTis/as0VM5q+sQVPFcxcaYpmf5R1r0C5iBBrDlgXzG+tbwlzIykrG+MYqvOwCmqQvGwap3V4xB5rNRK5irrEyiNvWvC/iZdyxX1rtI5Jr1nV7r5Gya8M+JeoLLqFsqnJViazrpcupdJvmOx8IXxMKFyM130N8uwCvNfAdo93FG3O2vWNP0dRGpI5rSEdNAlPUz7jUQiHaK43xDq8+1hGwX3xXpFzo6FD8teeeN9MMNtKyDkAmoqQutSoVNTD0PVpZZCss7Ng+tdzplypA5rwCDV5LS6fnBBrqtL8YSKAArMfYVjTqRirGs4t6ntJkBGc1j6teRxocsB+NcK/iy/kjxDaTN74xXM65reqTK3mROi1cq6toiI03fUt+MNZWRjFG2c9as+BNMlvJFlOdvavPGneWf8AeE5z3r3/AOGViv8AZ0DYHIBrKlH2s7sqrP2cbI7TQNK8uNciurgswFHFGnQBUHFascfFdc2o6I5opsxrqxDKeK5HxDoqSxPlM16LLHxWPqcAKNxTg1LRikrHyJ8StHOm6iJEXCua5G2SeRwsQJY17X8ZbEOsO0DO+snwJ4WSVllkTOfWuWVK82kbwqe5dnO6F4X1e9CkSNGp9q7C0+HF9MAZrybHoOK9b0TQ44kUBB+VdTa6cgUfKK39jFbmTqSkeHw/DGKNMyPLIfdjWVrHgARIxiBBFfRclguOlY2paarKwKik6MH0BVJx6nyPrenTafMUlBx61zz5+1pXuvxR0JRZSzKoyvPSvDSP9LSuWVPklY6Y1OeNz2j4PpiRz7ivoLSVHlrXgXwi++/1Fe/aV/q1rup/wzjl8ZtwgVPUMVTdq55bnREKD0opD0qSircdDWJKf3jfWtq5PymsKYjzW+tddFaHLUZhDW7foXFZ2o69bxqT5g/Osa90MqDhmz9a5HxBpMwhfa79PWpk5rYIpMk8U+L4UR1ikBP1rx6/v21PWFJbILYH51Dr5nhu3jkY9apaPk6lB/vj+dcTqOb1OtQUI3R9P/DnThFYQ/L2FeoW0ICDiuR8CxD+z4Tj+EV3sUfyiu9vlRxw1Kc0OVPFcX4u08S20mR2r0Jo+K5fxQgFtJ9KUXcclY+UG0d73xNcwIDsWTFeu+FPBkMUSFogW9xVDwjpKy65eTFeTKa9l0ewVI14qaNJRjzM0lNvQwIvDUIiwIh+VYeueFYpI2/dj8q9U8gAdKoahbAoeK2TTIaZ8r+LPDbWFwZI1wM17H8LmzpVvn+6KqePdOR7OZtoyAam+GcgTToR7VFOCjUdiJybirnr9ljaK0E6VjWUuVHNWr3ULbT7Ga8vp0gtoV3SSOcBRWdWOprTloXZSMVg6zfW1urLNcQxt6O4B/WvCvHfxfv9YuJbPRZhp+mngSg7ZZB67u2fQV5XqKiZmliuJp5ycli5Yk/XHNYxqqG2ps6Lmeu/Eae3vZI/Inhlw38Dhv5V0HgO0H2WPjtXztaXd3GxVxj/AHlIP6iut8OeMtX0K6UwTM0bfeWQb0H5n+VVGspSuyJUnGNj6r0+ABRxWvFGAK4XwF470nxGiQRy+TfADML/AC7jjnb6/wA676M8Vc2TBIR4xis+8hBU1pOeKoXjYU0qbdwmkeXfEm1DaRdDH8Br5ZZcXij3r6y8eMH0+4B7qa+UrpduoEejn+dTXXvIqhsz2P4SHEr/AIV77pTfu1r53+GFwI5iCeuK960afci8100leBhPSZ1cJ4FWB0qhbvkCramuaaszeMiTimueKKY54qUimyndthTXPzSfvW571tXrfKa5ieT9831rtpLQ5Kj1JL61XB4rk9ctFETcdq7u9ZMGuM8STAQvj0rFzN1E+b/iFGserkLWBo3/ACEYT/tj+dbnj992rt9awtI4vov94fzrhWsrnS1aNj7E8CH/AIl0H+6K76I/KK868ByD+z4P90V6BC/yCvQmtEcVNkzniuX8T/8AHtJ9K6R34rlfFEgFs/0pU0OozhvAsYN7cnH/AC0NesWCAIK8n8ESBbm4P/TQ16jp8vyimvgKia23iqV8o2GrQfjrVHUJPlNTC9ypbHnfjiMfYZ/901y/w7nIhVPQ10Pjy5C2c3PY1z3w5gJiDY6mtb2mjFrQ9c05yVFeMfHfxXf6hqy+F9LhzBAyNM2eZZWGQo9gD+f0r2nTYjha+fdLDX3j3Xb26LNIl5IBu/3iP0AxXNi6nLE6sHS55pFnwd8PbGzhjuNXVbu9Iywb7iewHeu9t9KsIo9sdpCo7AIBU+nRKWBbpWtJFGI+AK8pOUtbn0PLCGiRyOraTZToyvaROD6qK828S+F3iUvp9tcKoOflwwH5YI/WvYroAZ4qrE64KkcUQbTM60IyjseG6Tqd1pN9DMjmGeGTehKElWH14r6j+G/i+PxTpG+TYl7FgSxg9ePvgehrw/4leH4rmB763xHMq846N9af+znqUv8Awl7228okkDhkxjdjkZr0aU+bRnh1qXs3dH01I/FZl/JhTVyVsCsjUXJU4rogrGEjgPHdwBYzc/wmvmO+/wCP9j/tmvo7x0jSW0o7YNfOepDbqDj/AGjWdfdF0Va53Pgq4MNyhBr3vwzd+bGmDXz94Lj8y5UV7n4WiaILjpWtGVkZ1Y3Z6LaNlRV9DWXYklRWinSlUWoQ2J+1RyfdpaZIeKySNGZ1+flauRuWPnv9a6jUHwjVyVxIPPf612Q0RzS1Zr3r8GuK8SOTG+K7a9j4Ncb4hj/dvXA7nerI+cPHP/IUb6msXTTtuoz6MK3fHibdWb61gWXE6/WsYlS2Pqv4e3e/T4Of4RXpdtLlBXiXw1uiLKIE9q9bsp8xrzXpJqSOBJpmpLL8tcZ4vugttJz2ro7ibCGuA8aXB8iQD0pXSQ2rnO+Br0G8nUn+M16zp02VXmvn3wneGHVZBngtXs+i3oaNeaim7xNLWOwEpC9azdRuMIeaQ3PydaydSnOwirTGzzz4h3Z+zyAGr3wvG7T4j3rm/H8uYmrd+F0o/s+IZqU7zIasj2OxXCrivBFiVPHXiZosCL7fJgD68/rmvchfRWenzXU5PlQRmR8DJwBk14OJ/wC1Nc8QT2gZPPmLpnqA3IPHsa5MY/dsd+BTUuax0jeM9D0wFbm7Tcp2kKMnNbmjeJdN1lCbGUuMZwVIrzK70vUUtJPsujWDEHh7lvnb/aHYfjXQ/D7Tru1lma62lCMLgDH4e1cWiWh6icpPU1PFPi3TNIZFufMy4yNq5wK5628daTdXCRRmZA5xvZMKD71U8Vabc3niNAziKyTAPH6n/Csg2GqurRyRafIobCLD12+tCtuRNz2R3OrgT6ZKRh1K547isL4J2Zt/iWmwceRK34Yx/WtPR4ZRoskE2QQpAz1HFQ+AdZtfDOsz6heQtJEImi3LgbBuGT+lb0pJO7OKrCU/dS1PoKRMrWXfRcGtaGRJoI5YzlJFDKfUEZFU7xcg13JnC0ec+LLffbyDHavmjxJF5WtTL0w1fVPiWMGB/pXzB42TZ4hl+tZ1XccNGdV8OU33f0Ar3vQosIvFeD/DM/6bj2FfQeiIDGtXTehElqdJZjCitBOBVS1XAFXVFOTGkLUUvSpDUUvSpQ2jI1M/Ia4i6Y/aH+tdtqQJRq4y5jJnfg9a3UzLlOvvIxg1yGvwgxP9K7K7PBrlNc/1bZ9KwsbXPmj4lxbNWHvXKWf+uH1rtPilg6quK4u2OJhXN1Nd0e9fDtv9Ei+lesWchES89q8b+H84FtHXq1lP+6FdcXoc9jSnkJXrXDeLnHkyfQ11VxP8tcJ4vuf3T4NDeg+U870iTZrD/wC9Xr/h6bMac14xpZJ1Rj6tXrXhxjsSlTegSR2yy/JWXqUnyNVpG+Ss7UydhrQR5f45kyr1sfDGfFqgJrC8bj5GNXvhw+2BfrWadpg1oe2Rk3GnTxA8vGyj8RXmFoscfiHylVVzDGTgdSMivR9Il+Ra4HxvaXOm6jZ3IjIVd6B1HysuQwH168VhjIcyTO/A1FFOL8jpbsWsUSNKELHgLtBJNQWt9ZNJIPPiDpww3fdPpXD6v4i+y3iCV1UKi7Xc4GW7/lVO6srbVopZzqLCUj5XhDNj67a4VG56yn2Or1PVtOt7jBmQztyFwST+XStK1ls7mEMoUE9cgcV5SdBj06Rrh9QnLD5iZonGfxPapNG1yaecNaSCa3EixM6g7WyccH1FNxMvaW0aPRb8pCJTGQcKTXE6fHdanrUmmCMGK4jaONwvQseRn61YiupZ5bgFmKRgqT616D4C0O8t7u3vb3CQLFuWJsZ3noeO2KuFNzaSOVV1Tbmz1C3VYLaKFT8saBB9AMVUu5ODT/OBWqN5IMGvSseW5HNeIWzC49q+ZviCoXX2PrX0X4jnxE/NfOfj1/M1jPvWdRDg9To/hocX34CvoXQnAjWvnH4fzCK8HPXFe+aBcgxrzVQ2E9zu7ZxgVdVuKxLSbIHNX0l4602rgi7uFRy421EJPekkk4osO5QvhlTXLzoPOb610V/LhWrlbi4xM/1qiTprtsA1yPiGXEL810d5LnNcZ4lkIibFS9hpHgHxGl8zVfpXJwf64V0njz/kJE+9c1D/AKwVy9Tfoer+BboqiKTXrOnT7ol5rxTwaxBSvVtOmIiH0reJkbl1N8lcF4rk+Rq6eedip5rkfER3A5omVFHKaQv+m5x3r1fw5H8qV5no8f8Apo+tereH1ARKKTJmjpET5KztSX5GrWQDZWfqS/Ia3uZ2PJvHCfunpfh2cRLUnjsYieqHgCXCgZ71n9ofQ9t0lvkFVfiFatc+F5JkUs1qwmIHXbghvyBz+FO0iUbFrddVmtJYnGVdGUj1BGKqa5otFQfK0zxXw9fWT3KreLH5sUZQM4B3KTwT7YrYvNS/saPNlpQmgbhDC2FA+g6V5frgm0i9RQHMatgMO69QK6/SPGdmtkheQMxwGU8V5qVtUevTrtXizTg1GXV5S0mlBVP3pJiSMegzWdr+owWF/AY1QIkZBRR90+v86TVfFtiqkwFTv6fMRyPUVw17fvqupLgkhuD7+1O19WRWrX0TOw8NObx442Vl+0SAZHua9/tkCIFXgAYFeJeFrVLMxzXBC7CHY44RRyT+Ve2QMCAQcg+ldWGVkzz62trlosQKzb6YhTzV2Q/LWRqDfKa6kc7OR8S3H7p8ntXz/wCLn36kT717h4nJMT4rwzxQMXv41nWWhVN6mn4amMM0bCvaPDepAxp81eHaIeVxXpOgM6quDUQY5bnr9jfgqOa0kvx615/Z3UoUYrShuJTWuhJ2iXgPenPdjb1rl4ZpTjmpnlk29aALepXgCHmuOubwmd+e9aN/JIykGudmUmVvrWcpWLirnot2Otcj4jH7tq6+7zg8VyHiJsRtx2oewz568ejGo4965iE/vBXUePh/xMCfeuWh/wBYK5upr0PQ/CTY2V6hYNmJfpXk3heTBSvUdLlzCtdEXoZF+U/Ka5bXnAB5ro7mTCEiuG8S3JBYA0Seg0xmhuGvOvevVdBIKKBXiOhXDC+Az1NezeGXJjQ1EHYcjsY1+TmqOpL+7OK0Ij8grP1WeKGItNIka+rsAP1rS9yDynx4MQSfSud8DzbZMe9b3ji+s5YZBFcwOf8AZcGuC0zVDpmTEqySZ4z0FChJy0RPPFI+hNFnAiBYgKBkkngU3U/iDoGmgxLfxXN3kKsUOXyxOMFhwPzr561fxDqWoIVu7qQw/wDPJTtX8h1/Gs22maKaKQD5lbeB9Oa6VT7mbqdj3Hxr4bCX91btGfKdt0ZP8SHoQf0/CuBv/BqqDIh5zjGOTX0xoUdj4k0G3+1RiSOWNZI3HDLuAPB7VxnjLwvPoyecrCe0J4fjcv1Hf6ivLnTcW7HqQqQqpX3PCH8OugGWc49K3PC2hSy3SxWVq0svfA6e5PavW9H+H81xEJ9WYwQsMiBPvkf7R7fQc109vp1ppkPk2cKRRjso6/U96qFJy1ZjVqxhpHU43UrC08J+B9Xv790mvZLZ4UH8Ks42hV9Tz1rmvDHxdsNNt7HT/EVtPAixLGt9H+8RiBj5x1U/nXOfGzxYNU1iPSLN82di26Ug8PL0/QcfUmvLtQmaVVjPKk4xXoU6ajCyPOlWlKd2faFnfWuo2Md1YTx3FtIMpJG25WFUdQPBr5s+FnjK98MXHljMti5xLbk8Htkehr32y1zT9ctfO0+dX4y0Z4dfqKbi1qWpqWnU5vxJ/q3+leG+LR/pn/Aq9z8RD929eHeL/wDj8/GsKr0NYLUm8P8AzSLXqOhRfKteX+GuZlr1nQV/drWSZT3OlsouBxWpBCMdKqWScCteBOKu4WJIYhUssY2VJEvFSSr+7p3JOev1wDXPSkeY1dJqgwprkp5cSt9aiRUXY9Qu4uDXIeIYv3T13l3Fwa5LX4CY3+lbcpnzHzT8Ql23+PeuRh/1gruvifFsvQcd64SL/WCuR6M6E7o7rwqpdkr1fSbc+StebeCod+zAr2DSrMmJe3FdEI6GLlqU7u3/AHZrz7xZbsgY163NYEp1zXD+LtKZ4nx6U5Q0EpnmWiykagPY17L4fvFhtDLI2EjUsx9ABk141p8LQ6oVbrmu+1e/Gn+FJ+CXuB5C47ZHJ/LNRCN3YpytqVdZ+K2qXAkg0uCK0UEgSn53x268A1w15qF7qE7TXtxLcSnktK5Y1BGgLyfX+lTBR6V3xglscjbe5AQzn5jSOAqnHWrBHFQsD5qjtzVWEU42aRwsincntwR608Ai6Q84OaskGoyv71T6ZpDPo/wF4hGg/CS31WYb2t4WSJGP333EKv8AKvI31vUPFE0t3rkzzXwJ3l/ux/7KjsB6V6r8L7SDWPhzZLe27NBZMzRgniRy7ZOPboM+9ch8UNNi03xFILWEE3NvHLIiHbhssM9MZwBUUNKjNKvwIv8Awn8a6nb6zPpN5IbnQlUBXYktbv8A7J7r6jt2ruviVrn9geHbq5Rh57rsh/3j0Nct8HtDjnsGumhKvNKVYN2ANcn8cNf+2az/AGPbYFrZMQCD1OMYP05/OoceaoxbQTPJ5t0szMSSScsx5JPrUc4jiHmSsFjXkk1oxxhBUNzaQzlfOQME5GT0PrWzRilrch01t+6VFKq5yAeuK6Cxv5YGV4pXilT7ro2CKx7EB03KMIfu57j1q0RgcU0Elc6o+MtQMXl3RS4GMZYYb8xXJ+IWa/kEsCHOclM8/wD16VuhzURkCkevaonSjPcqNSUNi54bbE6huDXrugEeWteSWc6JMrv94dTXp3h2cFE54rjnScDpp1FM76xIwK1oOlYWnvwK2YH4FRY0ZoRmnyn5KghapJW+SqsSYerH5DXEXTH7Q/1rtNWPyNXD3R/0h/rQwPcrs8GuW1kgq4PpXQ3cuAea5LW5+G+lbozPAvi6gFyhHrXm8X+sFehfFOcSXCrnnNeex/6wVxS+JnTH4T1jwCoEcYPU8mvZdMCiFR7V4d4KuNnlHPtXsek3O6FcHtXbS1Ryz0ZuyEbeK5nXo1eN881syTfLXP61PiNua2sZtnmN7abdbDKODVPxlfeZdQ2aMfLgQZHbeev6YrRvrlU1F5DyEBb8q4+4mNxI8jnLMck981nCKu2U3dWHxfffPfBqWqkb7XXB6jHNW16ZNbozArUMi/Op96n4xUU5wuffNMQ0jGajx82amI5Oajx81JlH0T8Krkaf8I0uGwCZXC592Necapq0+ua1eXcrboifKQ44VV//AFk1utfG0+CegW6HDXM82QOpVdxP8wPxrmNIiIslLYCvlmPuaeHhq5Dqy0SPSfhPqMWn+Ftcu5HHl2BkYD/gOf58V4JqV1JfX89zMSZZnLsT6k13ovv7M+GWrRo2H1PUPJX3RPmb/wBlH4154Bkk1PL77Ym/dSAKCMEZqtcLvdbdOPM5b2Udfz6VbJCoSTgAZJ9BVeyBbdOww0vIB7L2H+fWmxItKoUcDAHalY4FBOFqLf1oEK5AUk9KpqxY7+Mt90H0pt5JvdYgcA8sf9kVEAZZQGOVpXFI3LCzjZc3BAJ6EN0rufDU2xEUHIAxmuCsrO2+XIbjrzXoHhe1WKNEXlR0JrOsrxSKw/xNnfaXLuQVt2z1maVCMDit6C2XqBXNys7Lonhbinyn5KfFbjFPlgJXrRYRzmqn5Grh7o/6Q/1rvNWgbY3NcNdQP9ofjvQxM9avbgbTXHeIbkLE+D2rqb2AgHBrjtfhBjfNNt2JR4H49kaW+Zj0zXIp/rBXYePlCXR+tccn+sFcr3OlbHZeGrhoWUZ4r1jQ9SUQqCe1eN6RKFK13Ok3Q2gFsV1UpWOeauejNqCFMlq5jxFqiLG201TnvQI/vVyut3u4EZraU7IzUTKvr0u8xz94YrCmd4Tu6qe9WJpSqNJjK5+b1xTA2ACSGjailsEtypLeDYHz901rW9yJIUYHgisHVIRsYwHPqnf8Kn0iTfbwhic46VonrYi2lzfWQYzUcx3IRTCwQY6UmcrmruTYnHIX6UwjmiE5iU/hSn71IZ6JqkmPh74TiHVbe4kx/vTbc/8Ajpploqx2ahziLbkVT1C4WXQPDsKkERWKq3tmWRv6irWov9n0i4Z+ixHyx+H/AOquiirRIqas5jXrzfpuk2SHKQwtM3+/I27/ANBCVjqKaCx272yQoGfoMU8VgUVb47zFbA/6w5f/AHR1/M4FT8DpVO1YTSzXPZjsT/dH+Jyaknk2IcHtSXcY2S5Bk2A0ksyxRF2NZ8LZmLMRzyKp6rdebKkCthScHHp3pOVlcErlj7QzIZCOZDx7KOlWrEkEE1lo/myjHCjgD0Fa0GwADvSiRI2rVxxivQ/BbiW2X1U4NeaW7dl5Nd38PbjFzLEx6gN+VVNXiKm7TPW9MHyit+3HArC0wgqK37bHFc9jrTLcY4p0nCUigCkm+7xSsO5i6oAVNcbcoPPf6112qEhWrjbh289/rQFz0W9mGDXGeIpB5TnNat/qC4PzVxfiPUlET5apktCVqeQ+PZA859c1xit8wroPFtx5t03PGa5pmwa43udUdjf0ybLda6mxnOBzXBafMVYV0lpckAc1tBmckdLLOSvWsXUH3Z5pWuSR1qjcy7uhq2zNIYMKoDLlG6n0rPlspVLLbyFR1XPK/Q/41ZuLbzVJjldXHBGeD+FUwl5B/qZcjujV1JWVjJsp3X2gIVuYnjYdJoxuH4irOkt5dvuLh8fxetR3d3JJAylihA5AODVezfFuq7mPzE5PWjZhujct5BK+eTVpm4wKrWm1Is8D60rSg5xVomxbt2/dMM9DTzVexk3NIvB4Bqw3SmBqaLffbEt4z92FhCfw/wD11v8AiebytLZJD87YC1yXgRfMubgHp9obH1rY8XynfBETlxlj/T+tbRdoXM2tTnxjNVtVmMVkwjz5sh8tMDue9PLYPBxWfO/naoq5+SBM/wDAj/8AWrBvoaJFiPbBEiZCqowM1BdSq4wpP1ApZQpHOarE7c56UCZVuP3MQCZOWzknmsqVyb3jk7RgVsSDzFw3A7VSsU26i/3vlAG8LnFZTTdkVTdrl2y0u5lUPKwgT361eSGK25EhbHc1FLcQoOZ2lbtToLSW5/eXA8mAc/McZrRJLRGcncuw3jTHZbpgd2xXX+C5DBqkalvmYEVyEdxEpEdouexfH8q3/D0nkajavnJ8wZq90Z3s0e46XcMAOa3re8ZcVy2muMCtiJ6ysdVzeW+PFOkvlC81kLJx1plxL8nWlYLkOr3ybTzXE3OpDz3x61r6xNhGrh7iX9+/1pFGje+ISUJVt1cfrerzz54IWrKwnZzWffQHn3rmcrmygkcZq8heTJPNZMproNVsCW3DNZjWOT3rna1NuhXtWwwrbtZOBVO207J6Gtm1004HBq4mchvmcUxSXkA6961k03j7tR3tmYIC6DDHgVqldoh6Iy5TJu82MgOOo9fakS5jmU/LiQdVNLFIkjEMNkw6r/hUF2katvyVb1FdiOZlHV5WMLYiAY8ZxVPSA0jKrDlScin6nM0kYG7jPWoNFkIllHPrk1nJ++i4r3WbdzLjCL19qSI56mojktkjr3qzCowM9a0JLOnn/ScEdQRV5uAeMVnwYSdCOgNaEvAPGKpEs1fh9F/oty4+88zlT6c1B4kkZ9UlUnlAF/HFXfARJ0hwvDebIc+g3VhXcpmuZZCclmJ/WtW7QSIW7K0hwpYkDAzzWNprtIssxzmVy34dqua9N5dkYwPnkOxTn86it4/KgRR2FYP4jToOc4HOarMctntUsvP3ScVWDHoCaCWOZuPaq+mRpK87ySKqb+Q2cEVJPJ5cRYjtUWl2klzbR8kRE7j7nNS90hwWjZoR3VrC+3TbXzZP75HAqdLW7vCGu5Dt7IOAKsQ/ZrNAoALdkWpM3lyflURR1ol3IkyaCGKJQodE9ya0dN2rcRBG3HcOazorGOH5pXDP71qaSm6+tgB1kX+dWjN7nrGnyMAOa2Ip3FZ2nW5ZRWxFatjisNTpFW6OMEGmS3XynNSNbOO1QXEJ2Hii7GYOrzpsbJrg7u7H2iTHrXaaxEQjcVwdyn79/rUSky0l1Ndo8LWbeqCcVKdSDrjbg1SnmDZNcl0ddjLvYw2azxb5fGK1JuTTIFBlAqXqMlsLDcRxXSWWmrgfLTLGJQFOK3LXaMVcVYmxT/s4L2rB8ZoLXToSq5ZpOnsBzXcEqVrh/iLOqrZR4LZ3nA/CtYbkVFaLOIuYxKFmgPzCmC7QwkTLkr1FBmkQnyLYZPdmqjdi8lY5tIj/ALSsRXTexx2KOp3CE/uVCimaPxLIxycgHJ7024DxHL2kZPoXJ/SlsLh5ZpGdVXACgAYArC/v6myXu6G6gU7easoMDjmqFsRu4q+jYHXn2roRkOjB79a0ZWymTg5GaooeOaseYTaD0AIqkSzb8IylPCVw6/KVaQ59eTWIKuaNIyeCFI4DSFfrls1nXMot7WSVgflHH1q5PRegktWYupu11qyxA5WEY/GrWGAAJrN0xSZWkfksck1rPgr15rGGquVLsVXyDzUO05zmpJG5wTmmE4HWmQyhqsmLdh0J4q9pMTtaxhJNo2jisnVmyY0PAJzmtywgiaNFE6KwHQnBrOLvUZra0EaMEaW+D5ZZvXrVoPcSdMRr7VFDbXKY2MCPrmp/3q/61D9QK3RiwWIKcsxY1u+HU36pbDHAbd+VYarkiui8NYW+Dt2Xim9EQtWj1fSn+UV0FuwwK5XS5gVXBregk4GKg3NTIIqOZUZTkCo0eiV/lpAjC1iCJkbivP7vT0NzJj1rvdWkwrVxFzN+/f60rJj1OMe4PpUL3LUxmFRMRXmWPRHPcNUaXBSZT71E7ComYH60xM7KwvQyAZ5rUhuT2NcFa3rRsvPSuns71HQHvVpkm99qbjmuM8e3sMc1r5rAMqkkk9if/rVuNdiuF8W2pufEK3EvMAjBA9xxirg9dCanwlaO/WVd0EEsnuFwP1qnfai6KUWBs9wCGx+VXA79EAH17VIXCriQx5PoK7NWtzjdl0OUkvSxJKsKl0w7jIT/ABGptRjupXdo2AjH8IOKg0oYVs+tc9pc6TNrrkujZhXGMGraNx0OarQdKnPA610IxJzLhcUqygWkwJPHIqBRuIz0p138lrKV7qadxM0rB2HhbT03fKzE4+mf8axtdmy0dspyPvN/SrmnyY0my3HKJGWx6Vixsbq5kmb+I5+npRJ3SQbXZagTYowKkMmOCDTsEDg81ERIT0zQTcaUOc4qJwfWrJZgNpHPtVG6k2RlicU3oidW7GbcFX1CFW6AjNdVDDDOgWZQy+46VxPmt9o83q2cjNdBYXt3GVM1uxX1WuajUTbOqpBpI2G0cIc28kij/pm5BoA1e0Uva3JuUXrFOuT+dXNPuIb1P3Mm2T8vzFLNfvZTBL+H5e0i11cq3WhzOT2Yyw1e11CRYp4/sd4OAD9xj/Suhs98D+jZrn76G0u0EiR7w3R17Gum0yPfFDu5YIM1NVtQswppOd0dRpOouoGeldRZ6oCBniuZ061BA4rbgtRgcVzqTR0tI6CC/RgOasPcKynBrGhtTxjNTPbuq8Eir52TyopaxKNjHNcBd3QFzIM9667WEl2HmuBuoHNxJyetJ1BqJze9iaCTVpIDxxUwts9q5VE6uYy3VjURic1vC0GORUqWWe1PkJuc95D4rV09W4yT0rRlsgE4FMht2j4xxQ1YaB2IHU1k6wN8CuOWQ/zrUuAVByaybslo2XdUqXK7lON1YxyFHLv+FPj8knO1mI9aiU5bBHPvUj4EZXOCeprvi9DhkZrw3E8zMGSNM8BarFDbz7WIO7PStYbIoXdFY4H3jWY8e6MzMfmxwKHHqhJ9y/bsMVN1NZ9u5ZQQauRsTQncdi4p+UVFqcq/2dOV+8q8ik39hWLqUxUXMMUhaFehII6kcVNSfKVGPMWzOyaEihuXG0ewpmnkpgHvVaRv9Gtk7BeTVmABcHOaUXdkz2NFj6dakAJUc02Lleam4C+wrdGLKk/AOSawNTmyNorV1C4CggGsFw1xcrGnLMcCufETsuVG1CF3zMfptk97MyJ/CMntXb6TCbawWPO50J4bnNZ2j2McSiA7lL/x98+9aUS/Z2aKU/RvWqo0/ZrzHVnzPyIby0Sf97ZnyLtOw71Y0rU4dYhey1BQlynB9/cVRv8AzYz5kTEleapzQG9YX1hxcx/62IdT7itG3F3RlZSVmbFjaz6XqX2dwXtpDwe3tXa6YgMmB0BwK5nSLt7mzjml5CjkMPusDj/Cuq0QZ21FZrRIqim7tnY6ZCNo4rdt4RjpWVpa/KK3bcYFZo0J4Y8VLLGNnNLHUk33KLAcxq8QKNXCXUP+kPx3r0LVVyrYrirmFzO/yHr6UmkO7OfW0A7VILcDtWukAYcCke2bsKm6NjMWGpo4cdqseQ4PQU9YmHpS5kOzImhGBmqVwoUVqMrEVSurdiDzWc5I0ijCvHwpFY0z4zmty5sXcnk1Rl0snqTXLKWpqos52fh1YdCeaazEtxya1tQ0porSSRQfl5/Csm3niA+bAf3rvw8+aOpxV4cshbpJHtgn8TnH0FAjRIxEAC5HWidJpDvRgR2APSltoGR9znL/AMq6kc7My3Gwsh6q2Kto2FJNZ9xPjVJlxjmpvM+UDNZKS6GjTLiucE1n6o2bZuBgsOanL4Xiqd8c2/fO4VNR+6xwWqHSj93GPQVJAxXg9Kjl4jUelG8BPei9mTujWSULHkc1XubuQpxgD0qtbSEoRmoJpSQQTWjnpchQ1syC4lLZPU1r6FpZUC4kXMvUA/w//XpdE09GhF5cjhiRGPT3rbt/Lj+6+RUwp3fNI0lKy5UKpdxgMFI9RSSSO4KyIGI9KVnG7Oc1DcMAQykg1uYtjGdWBBypqjDBLFeI9u2GJ7VaLh29+ldP4N0P7Xcm6nH7qPoP7xpTaSuyYpydkW9O0l5oIhIMZO844ya7LR9KSMLxVi2t0UjgVsWqquMVxOblK7O+NNRVkXbC2VQOK14Y1A6VQgcAVcSYetUpCcS6irT3A21UWanmbinzC5SleRBgeKxpLIFydtbs0g5qmzDJpNjUThLXkVc8sEVl2cwwOav+coA5rmczpUQeGmeTQ1yvrUbXSjvUcxXKBiqGSIHrSvdr61A92p7ik3cpIjkgBPAqI2o71IblPUUxrpB3FRYdyKexWWCSP++pX9K8yliihuZIZ1KzISrA+tenm9jH8QrhvGVuj6mt1ERtlX5sf3h/kV0UJcrsYV43VzPSW3hTAOP60+K43nCKQPU1mRTQ78S9K0YZ4mOI69CMrnA0Z+oWkXmtLsxIecg1npJlsHqK6KWFZMsxP4VgX0BguNwB2/0qKkbaocJXdmSs6+WNxqtcsGjAHJ3CmTuBsYngc1HJOC+Wcycgkj/69c86nQ2jDqaRiLxEqPuiqMmQcNWrBcRuh8lSsZ+6rHJ/Gsy/b94MKBz2rWpZxUkZU78zix0L4U0Wtu17c+WD8g+8f6Vd0PSZdRfJJjtx95/X2FdRbaZDaSERxhIscHPX3qoU3NK+wSmot9yW1tVbSvKCglBwBWaJFUbdvIrWW5hszlTxVS71qwOSYsv7Cul2sYXK5xs39BVOeQuePwqOa+Ny/wAq7U9BT4ELtx0HJxSv2Je5d0u3VlMkv3c4x612vh27EF2yHAR06ehFcTbXEkoUQRbE7Fz+uBW3YBvnBctIykA9MfShx5otCjLlmmehR30Y/iFXYNQjH8Y/OvIodWcnlzmtW01Jjj5jXmpnqnq0WpR/3xVhNRQ9GFec2t8TjmtKC99TVok7kagn96nHUUx96uM+3jI5p7X/AMvWgLHUzamgHWqTavEGOSa5O51PHes59QJYnNIZDFdFB1pLjVGQdaoFsCsvUZGC9a5EdDZoSa4+T81QPrbn+OuVeZyx5oDMwPNVymfMzon1l/8AnoahfWW/vn8652XdjqaqSMw7mnYLs6c6w39/9ajbV2/vfrXLbznkmnbvemK7OifVj/eqpc3hnZCxyhytY+auMuLSH3BP61dPe5E3oWoIrZ/XcOoNWwqKuIgAO5rKViQHHfr9atwS4HWuyErnNJWNCA9s1Bq9urW5ZmVMdCTjNO05ZtQvoLe3KxrLIqGdx8qZOM+9ega38HL5o4xZ3CX2RzMZNu4HocHhSOmB1pVMRCHul08NOa5ktDxO6OBtBBAOMio9v7jPcmvULf4Ka68n+lX2n28OfvFy5x9AP611I+CGmTWKxw61dG4X7z+WpXP07fnXnyrRudkcNUtseLJJtjViQD6AYFX9N03+0JFml4gXt/fNeg6x8HrmzgRINWt5GJwPMhZAOe5BOKf4w8Ial4QlghvgkluyDy54VwhOOntXZQqQqe7c5a1GdJ8zRgxZjTbGAoUYA6YqhfX0iEhs59ama4Yn/aH600zLICJVFdpxsxJrln+8TUaKrmtG4e0XI2/NVQsrtiNcCot3C/Ys20AOMcn2rRjVYhtzz/Ef6VXhIgjH/PRunsPWpkGEzWiMmRWLYmC56En9a2rSQrJmsCzfF5KPRjWxC3fvTiKRmXkPk6lOgGFLbh9DzWhZdqZrCbnt5gPvAofqOR/P9KsaehbFebUjyzaPUpS5oJmzaZwKuhyq0yztyQKtTWzBDTSY2zNnvChzmkbUcw5DVR1OGQA4BrBdp4yVOcVnJtMpG7Lfgk81Ta/XcfmFZodmHNMMQJztpXA6WaNkJBrI1IEqa67WYQrHA5rk9ROM5rC1mbPVGGkXz81dRFCdBVdWG6rSEEVsjIrTxZHSsq6j2nNbz42msi/IwaUhmOzEMaXeaY2cmjBqQJA1aswxGi+igVkwLvmRP7zAVrTHJNb0luZVGQQnDsp6Hmqsl6skhhAAjYgbqmlGc1mSxhWwtKbdrII23OntLh0iMZR2KcDaM16H4Z8ba/o+nLDexNPFj5c9QPQ0z4UxadregrbPGi39tJ8/rJ6E+vHH4V6LN4YsfLEmrOkaIMiJWwWHue1efWqSl7vY9XCU1Bcye5j+H9S1XxpdAQxSWemRH99KRguf7q+/v2r02zW3t4FhhjCoowAK57RvEGmjFlZxKiJwoAwoFbX2kbAyEHAO4KuTWcTpncrazYLdtgNhgvXpUFrLa6/o8vhvW9skqqfIZ+rAdgfUdvb6U6a9tpEkEJaaUcMq5BX61zWr2M8kqT20ht2jO4y9CpHIwaunNwldGVaCqQ5WeU+OPC974bvWDBpLMthJcdPY+hrk3kdulfS8dza+KdLdbuONrmNdk8ZHDj+8B6H9DXgPjWz0vSfEEllpV8s46tH18pv7m7of85r2aNbm0Z87WouLdjBKZOWFSxIsS+Y44HQetEaGRtpGPei4bc6hfuqMAf1roMCaIs7F25Jq5uwmKp2xwOnFTuQR+FWtiHuQQtjUJPfB4rVjbmsheL7IGMqK0Y2z0oiwki5IDPblByQwYD/P1rc0awdguVrD051S9jLn5dwz9O9ezWGgLFGCoyMcGuavH3uY6sNJ8riYNnZbFGRViWBSpGK6J7Dy16Vm3UJBIAqU0b2ZzN5Yq+cCsi50YMMha7QwgrUJtxzkcVlOzNIqx5/LpOw9KeumDaOP0rsbuCMZ4qsFiA6VzSWptGxnaw+5yK5LUomIPFdXqCF5ScVl3VvuHSluw6HFFGVjn1q1CcJ8xrSlsvmPFQtaYHSrtYzKM0qhSAc1mXGXrWlgx2qnLEBUu5SMgx8mjy6utFyaXy8UirEFlF/pCkj7uTU8h5zmnwp85x3GKY4Oa6aXwnPWVmQSdazpxhzWjL1qnMuaJkxPR/g5f2unwX8yhP7R3AbifmWLHb8c5rsI7zUfEV06aKjTuD890zYij+rd/oM14NblY7iJ5AWjVgWUcZXPIr3aLxTp8+mxR2F7FDbImfJiIDf98jnNedXg1LmPVwtVOPL2N3SWtfD3lpdzpdXQP7yTH3j9OwrpxqFtqLj7NdrGVG7ER5+leYw2mp6uous/YLEH5BIAZZfc+g9qs2OopoF4qGSNrhx9xj8xH9KxWh182ljtb+e+w3kXUkBAxthAH51lCW5cst9cyP2yxz1q7LqS3WkrOjxQMAS+7GAPUmvJPFHj7zZm0/RpN2co92P/AGT/AB/KtYQc3ZHNVqKmrsi+IHiqa0vTYaFcvD5alLieJsMxPVAR2Hf3+ledw/Ng988mrjW7OxXqe9VWRonKmvQVP2aseVKr7R3OisZN0BU8nHXvUco+frVLTp9rgGrsvLZGK74y5onBKPLImhG5fcVITt4amW5zx3qTjnParRD3Izt8xWUfwkGrELHGaaw3JngYOKWH7hzTQmT27fvRk19N+DHXU/Cem3fBZoQrf7y/Kf5V8uwtiTNfQHwP1IzeGbyzc821xuX/AHXGf5g1nVV43NsO7Tt3Oqv7YKDXI6wfJDV2OpygKSTXBeIrlcNzXFJnopGZBebmIPrVp7hdmc1zC3G2Q88VHdangbVao5r7j2NLUbxVzg1lG+561kXt8cEk1jtqJ3H/ABqG0F2ej3kA54rPeAEdK1b18E1UQbhSbSepau0ZEtoOeKoXFuBXRTQMVJFZF5E654o9pF9RcjMC6jAzWVcJzWxeBhnINZM5JbpUtpgU2WmEZqwVzSeUTSuikLAnzCqFw7LKxZcpnqO1asI2kZFZ07lWO0ZIPIrahrczxL2RUchuQQR7VXcZqSaSAn94kkb+q1CfLb7lwf8AgQrWWpzoYw5qxpGqSaRqUd1bKkjrkMr9GB6iqrwyH+MMPaojHjqCKylG+jRrF2d0ewaV4yXW4QluUg1D7qxzOMAY6qOAfpTbi70rQopp9Tu1mu2OXUMHlkb6dvx4FeQcj3oChj05rm+rq51fW5W1WpveJ/Fl9rhMWRb2IPy28Z4P+8f4j+lc8pKsGHBByKk2UhVB61so22Odz5ndnT6f5dzZiWPBc8OPQ1TvbbnOKzNOvGsptyZKH7y+orpQ0V5biSEhh6dxXoQkqsbPc4JxdKV1sYEYKSfStWJ8oM1WuYNkuPWpoxhOe1KC5W0E3zJMkDlWzUokyM55qCToT2qNJ0UkbgT6DmtOaxny3NBW3RsPTBq1bRtK2yJS7twAoyTUvhawi1K9IuN4hVSWC8E16ZpNrZaeoNlbJExHL9WP4mnzlRpcxzeg/D+/vHWXUJksoDyQRukI+nb8a9f0CGy0HTEstPXbGOWY8s7epPrXOxXDt3qYyyY4NZSbZ0QhGOxranqIKNzXnniG+JdtprZ1GWQqcmuP1UMSc1zzRumUftR53Gq8kozmqspIeoXcmsykNvZdwIBrLbqatTGqpPNYvctH/9k=" alt="John May, UAE Property Expert for HNW">
+      <div class="advisor-badge">Exclusive Advisor</div>
+    </div>
+    <div class="advisor-content">
+      <span class="eyebrow">Your Advisor</span>
+      <h3>John May</h3>
+      <div class="advisor-title">UAE Property Expert for HNW</div>
+      <div class="advisor-meta">15 years' experience · ADGM, Abu Dhabi</div>
+      <p>John has spent 15 years helping people buy property in the UAE. He works with families, business owners, and people planning to retire abroad — guiding them through what to buy, what to avoid, and how to do it without ever needing to fly out.</p>
+      <p>He handles everything from finding the right home to signing the paperwork, and he's there long after you own it. You won't deal with a call centre. You won't get passed around. Every question goes straight to John.</p>
+      <div class="advisor-contact">
+        <div class="contact-item">
+          <div class="label">Call John</div>
+          <div class="val">+971 50 000 0000</div>
+        </div>
+        <div class="contact-item">
+          <div class="label">Email John</div>
+          <div class="val">john@maypartners.ae</div>
+        </div>
+      </div>
+      <div style="margin-top: 40px;">
+        <a href="#enquire" class="btn-primary">Book a 30-min call with John</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-block" id="enquire">
+  <div class="enquire-wrap">
+    <div class="enquire-left">
+      <span class="eyebrow">Register your interest</span>
+      <h2>Get the full <em>details pack.</em></h2>
+      <p>9 villas left in the Phase 1 release. Prices rising 5% on 1 March. Fill in your details and John will send you the full information pack within 24 hours — floor plans, exact unit availability, payment plan, and a direct line to him.</p>
+      <ul class="enquire-list">
+        <li>Live availability — which villas, which plots</li>
+        <li>Full pricing and the 10/40/60 payment plan</li>
+        <li>Realistic return scenarios for your situation</li>
+        <li>10-year UAE Golden Visa application process</li>
+        <li>How to buy remotely without flying out</li>
+      </ul>
+    </div>
+    <form class="enquire-form" id="leadForm" action="https://formspree.io/f/xbdbzekq" method="POST">
+      <div class="form-row">
+        <label>Your name <span class="req">*</span></label>
+        <input type="text" name="name" id="f-name" required minlength="2" placeholder="e.g. Sarah Mitchell">
+        <span class="form-error" data-for="f-name">Please enter your name</span>
+      </div>
+      <div class="form-row">
+        <label>Email <span class="req">*</span></label>
+        <input type="email" name="email" id="f-email" required placeholder="you@example.com">
+        <span class="form-error" data-for="f-email">Please enter a valid email address</span>
+      </div>
+      <div class="form-row">
+        <label>Mobile number (with country code) <span class="req">*</span></label>
+        <input type="tel" name="phone" id="f-phone" required pattern="^\+?[0-9\s\-\(\)]{8,20}$" placeholder="+44 7700 900000">
+        <span class="form-error" data-for="f-phone">Please enter a valid mobile number, including country code (e.g. +44 7700 900000)</span>
+      </div>
+      <div class="form-row">
+        <label>Where do you live?</label>
+        <input type="text" name="country" placeholder="e.g. London, UK">
+      </div>
+      <div class="form-row">
+        <label>What's your timeframe?</label>
+        <select name="timeframe">
+          <option>Just exploring</option>
+          <option>Looking to buy in 3 months</option>
+          <option>Looking to buy in 6 months</option>
+          <option>Ready to buy now</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label>Anything else? (optional)</label>
+        <textarea name="message" rows="3" placeholder="e.g. I'd prefer email contact only"></textarea>
+      </div>
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+      <input type="hidden" name="_subject" value="New Al Naseem lead from website">
+      <input type="hidden" name="source" value="al-naseem-landing">
+      <button type="submit" class="form-submit" id="submitBtn">Send my details to John</button>
+      <p class="form-note">Fields marked <span class="req">*</span> are required. We'll only use your details to send you the information pack. Your information is never shared with third parties.</p>
+    </form>
+  </div>
+  <div id="thanks-message" style="display:none; text-align:center;">
+    <span class="eyebrow">Thank you</span>
+    <h2 style="margin: 32px auto;">Your request is <em>on its way to John.</em></h2>
+    <p>You'll hear back from him within 24 hours with the full information pack.</p>
+  </div>
+</section>
+
+<script>
+const leadForm = document.getElementById('leadForm');
+const submitBtn = document.getElementById('submitBtn');
+
+leadForm.addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  if (!leadForm.checkValidity()) {
+    leadForm.reportValidity();
+    return;
+  }
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending...';
+
+  try {
+    const formData = new FormData(leadForm);
+    const response = await fetch(leadForm.action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      document.querySelector('.enquire-wrap').style.display = 'none';
+      document.getElementById('thanks-message').style.display = 'block';
+      document.getElementById('thanks-message').scrollIntoView({behavior: 'smooth', block: 'center'});
+      document.getElementById('stickyCta').classList.remove('visible');
+    } else {
+      throw new Error('Submission failed');
+    }
+  } catch (err) {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Send my details to John';
+    alert('Sorry, something went wrong. Please try again, or email john@maypartners.ae directly.');
+  }
+});
+
+const stickyCta = document.getElementById('stickyCta');
+const enquireSection = document.getElementById('enquire');
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  const enquireTop = enquireSection.offsetTop;
+  if (scrolled > 800 && scrolled < enquireTop - 600) {
+    stickyCta.classList.add('visible');
+  } else {
+    stickyCta.classList.remove('visible');
+  }
+});
+</script>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h4>May Property Advisory</h4>
+      <p>Helping international buyers find and purchase the right property in the UAE. Based in Abu Dhabi. Working across Hudayriyat, Saadiyat, Yas and Reem islands.</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <a href="tel:+971500000000">+971 50 000 0000</a>
+      <a href="mailto:john@maypartners.ae">john@maypartners.ae</a>
+      <a href="#">ADGM, Abu Dhabi</a>
+    </div>
+    <div>
+      <h4>Partners</h4>
+      <p>Modon Properties</p>
+      <p>Aldar Properties</p>
+      <p>Emaar Properties</p>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Disclaimer</a>
+    </div>
+  </div>
+  <div class="disclaimer">
+    The prices and return figures shown are estimates only and are not a promise or guarantee. Property prices can go up or down. We strongly recommend getting independent tax advice in the country where you pay tax. May Property Advisory is RERA-licensed to introduce property buyers in Abu Dhabi.
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 May Property Advisory</span>
+    <span>Confidential · For named recipient only</span>
+  </div>
+</footer>
+
+</body>
+</html>
